@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#ffe8f1"><title>KUCHUPUCHU — Little cards, big feelings</title>
+<style>
+:root{--pink:#ff6fa8;--deep:#9b4774;--ink:#50364b}*{box-sizing:border-box}body{margin:0;font-family:system-ui,sans-serif;background:linear-gradient(145deg,#fff4f8,#f4efff);color:var(--ink)}header{padding:22px 6%;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}.logo{font-size:1.55rem;font-weight:900;letter-spacing:1px;color:#d94e8b}.tag,small,.from,footer{color:#98778b}main{max-width:1050px;margin:auto;padding:12px 5% 60px}.hero{text-align:center;padding:38px 16px 28px}.hero h1{font-size:clamp(2rem,7vw,3.5rem);margin:12px 0;color:#a84479}.hero p{max-width:570px;margin:0 auto 20px;line-height:1.6}.pill{display:inline-block;background:#fff;border:1px solid #f6c9dc;border-radius:999px;padding:8px 14px;color:#a84479;font-size:.85rem}h2{font-size:1.35rem;margin:30px 0 14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px}.card{background:#fff;border:1px solid #f4d8e5;border-radius:20px;padding:18px;box-shadow:0 8px 24px #a65a8010}.template{min-height:155px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;cursor:pointer}.template:hover{transform:translateY(-3px)}.emoji{font-size:2.5rem}.template strong{margin-top:8px}.template small{margin-top:4px}.editor{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}.fields{display:grid;gap:11px}label{font-size:.9rem;font-weight:650}input,textarea,select{width:100%;padding:11px 12px;border:1px solid #e9cddd;border-radius:12px;background:#fff;font:inherit;color:var(--ink);margin-top:5px}textarea{min-height:100px;resize:vertical}button{border:0;border-radius:999px;padding:11px 17px;font:inherit;font-weight:700;cursor:pointer;background:var(--pink);color:#fff}button.secondary{background:#f1e8f6;color:#874d76}.actions{display:flex;gap:9px;flex-wrap:wrap}.preview{min-height:320px;background:linear-gradient(145deg,#ffe0ed,#eee5ff);border:2px dashed #e5afd0;border-radius:22px;padding:24px;display:flex;align-items:center;justify-content:center;text-align:center}.preview-inner{width:100%;background:#ffffffd9;border-radius:18px;padding:25px 16px}.preview .big{font-size:3.2rem}.preview h3{font-size:1.55rem;color:#a84479;margin:8px 0}.preview p{line-height:1.6;white-space:pre-wrap}.notice{font-size:.83rem;color:#896d80;line-height:1.5;margin-top:12px}footer{text-align:center;padding:28px 15px;font-size:.85rem}@media(max-width:700px){.editor{grid-template-columns:1fr}.preview{min-height:260px}}
+</style></head>
+<body>
+<header><div><div class="logo">💗 KUCHUPUCHU</div><div class="tag">Little cards, big feelings</div></div><span class="pill">Made with a little love ✨</span></header>
+<main>
+<section class="hero"><span class="pill">A tiny corner for thoughtful surprises</span><h1>Send a little happiness 💌</h1><p>Choose a card, add your own words, and share a sweet surprise with someone special.</p><a href="#cards"><button>Explore cards</button></a></section>
+<section id="cards"><h2>Choose a card</h2><div class="grid">
+<div class="card template" data-title="Sending love" data-emoji="💖" data-message="Just a little reminder that you are appreciated."><span class="emoji">💖</span><strong>Sending love</strong><small>A warm little note</small></div>
+<div class="card template" data-title="Birthday wishes!" data-emoji="🎂" data-message="Wishing you a day full of smiles, fun, and lovely surprises!"><span class="emoji">🎂</span><strong>Birthday</strong><small>Make their day brighter</small></div>
+<div class="card template" data-title="Thank you!" data-emoji="🌷" data-message="Thank you for being thoughtful. It means a lot!"><span class="emoji">🌷</span><strong>Thank you</strong><small>A little gratitude</small></div>
+<div class="card template" data-title="Best friends forever" data-emoji="🫶" data-message="Life is more fun with a friend like you."><span class="emoji">🫶</span><strong>Friendship</strong><small>For your favourite people</small></div>
+<div class="card template" data-title="You can do it!" data-emoji="🌟" data-message="Believe in yourself. One step at a time — you’ve got this!"><span class="emoji">🌟</span><strong>Good luck</strong><small>A boost of encouragement</small></div>
+<div class="card template" data-title="Just because..." data-emoji="🌈" data-message="No special reason. Just wanted to send you a little happiness."><span class="emoji">🌈</span><strong>Just because</strong><small>A surprise for any day</small></div>
+</div></section>
+<section><h2>Create your own card</h2><div class="editor">
+<div class="card fields">
+<label>To<input id="to" placeholder="Someone special"></label><label>From<input id="from" placeholder="Your name"></label><label>Card title<input id="title" value="A little note for you"></label>
+<label>Choose an emoji<select id="emoji"><option>💌</option><option>💖</option><option>🌷</option><option>🎂</option><option>🫶</option><option>🌟</option><option>🌈</option><option>🐻</option><option>🦋</option></select></label>
+<label>Your message<textarea id="message" placeholder="Write something kind...">Hope this little card makes you smile today!</textarea></label>
+<div class="actions"><button id="share">Share on WhatsApp</button><button class="secondary" id="copy">Copy card link</button></div>
+<p class="notice" id="status" aria-live="polite">Your card preview updates as you type. For other people to open shared links, publish this page online first.</p>
+</div>
+<div class="preview"><div class="preview-inner"><div class="big" id="pemoji">💌</div><div class="from" id="pto">For someone special</div><h3 id="ptitle">A little note for you</h3><p id="pmessage">Hope this little card makes you smile today!</p><div class="from" id="pfrom">With care</div></div></div>
+</div></section></main><footer>© <span id="year"></span> KUCHUPUCHU · Share kindness, one card at a time 💗</footer>
+<script>
+const $=id=>document.getElementById(id),fields=['to','from','title','emoji','message'];
+function update(){$('pto').textContent=$('to').value.trim()?'For '+$('to').value.trim():'For someone special';$('pfrom').textContent=$('from').value.trim()?'With care, '+$('from').value.trim():'With care';$('ptitle').textContent=$('title').value||'A little note for you';$('pemoji').textContent=$('emoji').value;$('pmessage').textContent=$('message').value}
+fields.forEach(id=>$(id).addEventListener('input',update));
+document.querySelectorAll('.template').forEach(c=>c.addEventListener('click',()=>{$('title').value=c.dataset.title;$('emoji').value=c.dataset.emoji;$('message').value=c.dataset.message;update();document.querySelector('.editor').scrollIntoView({behavior:'smooth'})}));
+function cardUrl(){const d={to:$('to').value,from:$('from').value,title:$('title').value,emoji:$('emoji').value,message:$('message').value};return location.href.split('#')[0]+'#card='+encodeURIComponent(btoa(unescape(encodeURIComponent(JSON.stringify(d)))))}
+function loadCard(){if(!location.hash.startsWith('#card='))return;try{const d=JSON.parse(decodeURIComponent(escape(atob(decodeURIComponent(location.hash.slice(6))))));fields.forEach(k=>{if(d[k]!==undefined)$(k).value=d[k]});update()}catch(e){}}
+$('share').onclick=()=>{const u=cardUrl();window.open('https://wa.me/?text='+encodeURIComponent('I made a little card for you 💌 '+u),'_blank','noopener');$('status').textContent='WhatsApp opened. Send the card link to share your creation.'};
+$('copy').onclick=async()=>{const u=cardUrl();try{await navigator.clipboard.writeText(u);$('status').textContent='Card link copied! Paste it into a chat.'}catch(e){$('status').textContent='Copy unavailable. Copy this link: '+u}};
+$('year').textContent=new Date().getFullYear();loadCard();update();
+</script></body></html>
